@@ -18,8 +18,9 @@ export class MenusService {
     return { _id: menu._id }
   }
 
-  findAll() {
-    return `This action returns all menus`;
+  async findAll() {
+    const results=await this.menuModel.find();
+    return results;
   }
 
   findOne(id: number) {

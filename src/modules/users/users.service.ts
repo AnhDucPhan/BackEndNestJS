@@ -44,9 +44,7 @@ export class UsersService {
   }
 
   async findAll(query: string, current: number, pageSize: number) {
-    console.log('check', query)
     const { filter, sort } = aqp(query)
-    if (filter.current) delete filter.current;
     if (filter.current) delete filter.current;
     if (!current) current = 1;
     if (!pageSize) pageSize = 10;
