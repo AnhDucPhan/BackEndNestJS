@@ -19,8 +19,8 @@ export class MenusService {
   }
 
   async findAll() {
-    const results=await this.menuModel.find();
-    return results;
+    const menus=await this.menuModel.find();
+    return menus;
   }
 
   findOne(id: number) {
